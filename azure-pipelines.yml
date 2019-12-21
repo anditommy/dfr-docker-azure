@@ -37,9 +37,8 @@ steps:
   displayName: 'Install prerequisites'
 
 - script: |
-    pushd '$(projectRoot)'
-    # python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input && flake8
-    docker-compose run --rm app sh -c "python manage.py test && flake8"
+    pushd '$(projectRoot)'    
+    docker-compose run --rm app sh -c "python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input && flake8"
   condition: succeededOrFailed()
   displayName: 'Run tests'
 
