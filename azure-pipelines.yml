@@ -51,7 +51,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'anditommy-docker-hub:azure'
-    repository: 'dfr-docker-azure'
+    containerRegistry: 'anditommy-docker-hub'
+    repository: 'dfr-docker-azure"azure'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
