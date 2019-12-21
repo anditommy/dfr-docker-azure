@@ -37,7 +37,7 @@ steps:
 
 - script: |
     pushd '$(projectRoot)'
-    python manage.py flake8 && test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
+    python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input && flake8
   condition: succeededOrFailed()
   displayName: 'Run tests'
 
