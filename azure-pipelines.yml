@@ -52,7 +52,7 @@ steps:
   inputs:
     containerRegistry: 'anditommy-docker-hub'
     repository: 'dfr-docker-azure'
-    tags: tag1
+    tags: latest
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 
